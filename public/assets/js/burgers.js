@@ -17,8 +17,8 @@ $(function() {
       type: "POST",
       data: newBurger
       }).then(
-      function() {
-          console.log("created new burger");
+      function(data) {
+                  console.log("new burger");
           // Reload the page to get the updated list
           location.reload();
       }
