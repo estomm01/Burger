@@ -1,6 +1,6 @@
 //Require mysql npm package to create a connection to the mysql database.
 var mysql = require("mysql");
-
+var connection;
 // //Read and set any environment variables with the dotenv package.
 require("dotenv").config();
 
@@ -9,11 +9,7 @@ require("dotenv").config();
 if (process.env.JAWSDB_URL) {
   //   //   //Heroku deployment
   connection = mysql.createConnection(process.env.JAWSDB_URL);
-}
-
-else {
-
-
+}else {
   //   //else use localhost database for local development.
   //MySQL password is passed into connection.js from the .env file using the dotenv npm package.
   var connection = mysql.createConnection({
