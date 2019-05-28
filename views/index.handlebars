@@ -9,7 +9,7 @@
     <div class="col-md-12">
       <div class="card border border-primary">
         <div class="card-header bg-primary text-white">
-         Can I take your order?
+          Can I take your order?
         </div>
         <!--Create/add burger form-->
         <div class="card-body">
@@ -30,15 +30,24 @@
     <div class="col-md-6 mt-4">
       <div class="card border border-primary">
         <div class="card-header bg-primary text-white">
-         Burgers
+          Burgers
         </div>
         <!--Div to hold burgers that have not been devoured yet-->
         <div class="card-body">
-              {{#each burgers}}
-                {{#unless devoured}}
-                  {{> burgers/burger-block devour=false}}
-                {{/unless}}
-              {{/each}}
+          {{#each burgers}}
+          {{#unless devoured}}
+
+          <div class="mt-4">
+            <h4>{{burger_name}}</h4>
+
+            <!--Devour me button-->
+            <button class="change-devour btn btn-primary" data-id="{{ItemID}}" data-newdevour="{{devoured}}">
+              <img src="/public/assets/img/devour.png" width="25px" height="25px" class="mr-2"> Devour me
+            </button>
+          </div>
+
+          {{/unless}}
+          {{/each}}
         </div>
       </div>
     </div>
@@ -46,14 +55,21 @@
     <div class="col-md-6 mt-4">
       <div class="card devoured-card">
         <div class="card-header text-white" id="devoured-card-header">
-         Devoured burgers
+          Devoured burgers
         </div>
         <!--When a burger has been devoured, put burger here-->
         <div class="card-body">
           {{#each burgers}}
-              {{#if devoured}}
-                {{> burgers/burger-devoured devour=true}}
-              {{/if}}
+          {{#if devoured}}
+          <div class="mt-4">
+            <h4 class="devoured-burger-name">{{burger_name}}</h4>
+
+            <!--Throw away burger button-->
+            <button class="delete-burger btn btn-primary" data-id="{{ItemID}}"><i class="far fa-trash-alt"></i> Throw
+              away</button>
+          </div>
+
+          {{/if}}
           {{/each}}
         </div>
       </div>
@@ -75,4 +91,4 @@
         </div>
       </div>
     </div>
-</div>
+  </div>
