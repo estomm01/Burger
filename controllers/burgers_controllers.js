@@ -6,6 +6,11 @@ var router = express.Router();
 // Import the model (burger.js) to use its database functions.
 var burger = require("../models/burger.js");
 
+// var hbsObject = require('express-handlebars').create();
+
+// hbsObject.getPartials().then(function (partials) {
+
+// });
 // Create all our routes and set up logic within those routes where required.
 //GET route to get burgers from database.
 router.get("/", function(req, res) {
@@ -32,7 +37,7 @@ router.post("/api/burgers", function(req, res) {
 
 //PUT route to update burger devoured state.
 router.put("/api/burgers/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+  var condition = "ItemID = " + req.params.id;
 
   console.log("condition", condition);
 
@@ -50,7 +55,7 @@ router.put("/api/burgers/:id", function(req, res) {
 
 //DELETE route to throw away a burger.
 router.delete("/api/burgers/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+  var condition = "ItemID = " + req.params.id;
 
   burger.delete(condition, function(result) {
     if (result.affectedRows == 0) {
