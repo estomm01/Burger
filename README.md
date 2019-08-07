@@ -12,8 +12,6 @@
   	* [Backend technologies](#Backend)
   	* [Frontend technologies](#Frontend)
   * [Design improvements](#design-improvements)
-  * [Acknowledgments](#Acknowledgments)
-  * [Issues](#Issues)
 
 ## <a name="live"></a>Live
 https://fast-spire-92668.herokuapp.com
