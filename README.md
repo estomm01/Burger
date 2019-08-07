@@ -49,7 +49,7 @@ For more information about the MVC design pattern, check out the following resou
 ## <a name="getting-started"></a> Getting started
 The following section will take you through the steps of setting up this application and getting it running locally on your computer.
 
-If you don't want to set up this project locally and just want to see the deployed application, go to  https://gentle-caverns-56054.herokuapp.com/.
+If you don't want to set up this project locally and just want to see the deployed application, go to  https://fast-spire-92668.herokuapp.com
 
 To set up this application locally on your computer, perform the following steps:
   1. [Clone the repository](#clone-repository)
@@ -64,7 +64,7 @@ To set up this application locally on your computer, perform the following steps
 ### <a name="clone-repository"></a> 1. Clone the repository
 The first step is to clone the project repository to a local directory on your computer. To clone the repository, run the following commands:
 <pre>
-  git clone https://github.com/philipstubbs13/burger.git
+  git clone https://github.com/estomm01/Burger
   cd burger
 </pre>
 
